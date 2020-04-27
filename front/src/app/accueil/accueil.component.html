@@ -1,5 +1,6 @@
 
-<app-header (click)="fullpage_api.moveTo('accueil',1)"></app-header>
+<app-header></app-header>
+<div (click)="fullpage_api.moveTo('accueil',1)"></div>
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
   <div class="section"(click)="fullpage_api.moveTo('dirigeant',2)">
     <div id="box" (click)="fullpage_api.moveTo('forum',3)">
@@ -49,7 +50,7 @@
       </div>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('accueil',1)">
+  <div class="section">
     <app-form></app-form>
   </div>
   <div class="section">
