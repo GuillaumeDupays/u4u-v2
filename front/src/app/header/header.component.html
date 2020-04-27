@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+  <div class="col-sm-4">
+    <a class="navbar-brand card-header" href="#">
+      <img src="/assets/images/LOGO-u4yV2.png" class="img-fluid" alt="Image" style="height: 60px"/>
+    </a>
+  </div>
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div ngbDropdown class="collapse navbar-collapse row-cols-2" id="navbarNav" [ngbCollapse]="isCollapsed">
+    <ul class="col-sm-4">
+      <div ngbDropdown class="d-inline-block">
+        <a class="btn btn-dark" id="dropdownBasic1" ngbDropdownToggle href="#">
+          <img src="assets/images/U4Y_btnMenu_QuiSommesNous.png" class="img-fluid" style="max-height: 30px"/>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="bg-dark">
+          <a ngbDropdownItem class="text-white bg-dark" href="#dirigeant">Dirigeant</a>
+          <a ngbDropdownItem routerLink="#" routerLinkActive="active" class="text-white bg-dark">Etat d'esprit</a>
+          <a ngbDropdownItem routerLink="#" routerLinkActive="active" class="text-white bg-dark">Valeurs</a>
+        </div>
+      </div>
+    </ul>
+    <ul class="col-sm-4">
+      <div ngbDropdown class="d-inline-block">
+        <a class="btn btn-dark" style="" id="dropdownBasic2" ngbDropdownToggle href="#nos-offres">
+          <img src="assets/images/U4Y_btnMenu_NosOffres.png" class="img-fluid" style="max-height: 30px"/>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2" class="bg-dark">
+          <a ngbDropdownItem  class="text-white bg-dark" href="#data">Data</a>
+          <a ngbDropdownItem  class="text-white bg-dark" href="#digital">Digital</a>
+          <a ngbDropdownItem  class="text-white bg-dark" href="#it-risk">It Risk</a>
+        </div>
+      </div>
+    </ul>
+    <ul class="col-sm-4">
+      <div ngbDropdown class="d-inline-block">
+        <a class="btn btn-dark" style="" id="dropdownBasic3" ngbDropdownToggle href="#nous-rejoindre">
+          <img src="assets/images/U4Y_btnMenu_NsRejoindre.png" class="img-fluid" style="max-height: 30px"/>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic3" class="bg-dark">
+          <a ngbDropdownItem class="text-white bg-dark" href="#nous-rejoindre">Collaborateur</a>
+          <a ngbDropdownItem routerLink="#" routerLinkActive="active" class="text-white bg-dark">Agence</a>
+          <a ngbDropdownItem routerLink="#" routerLinkActive="active" class="text-white bg-dark">Actionnaire</a>
+        </div>
+      </div>
+    </ul>
+  </div>
+</nav>
+

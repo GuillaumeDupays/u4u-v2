@@ -1,0 +1,111 @@
+/*
+table {
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+$default-font-family : orkney;
+
+
+table.table {
+  border:1px solid white;
+
+}
+
+div.container.col {
+  margin-left: 0;
+  padding: 0;
+}
+
+div.container {
+  margin-left: 0;
+  margin-right: 15px;
+  padding: 0;
+}
+
+table {
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+*/
+
+$default-font-family : orkney;
+
+
+.row {
+  cursor:pointer;
+  margin-left: 10px;
+}
+
+tr:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+
+
+
+tr:active {
+  color: orange;
+}
+
+div.in-container-Etat {
+  margin-right: 10px;
+  min-width: content-box;
+}
+
+th {
+  text-align: center;
+}
+
+
+.th-etat {
+  text-align: left;
+}
+
+div.in-container {
+  margin-right: 10px;
+}
+
+div.in-container-Lille {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+div.in-container-LDE {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+div.in-container-Avi {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+div.in-container-Nantes{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+div.in-container-LDE-Nantes {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+div.in-container-Strasbourg{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+div.in-container-LDE-Strasbourg {
+  margin-left: 0;
+  margin-right: 60px;
+}
+
+table.table {
+  border:1px solid white;
+}
+
+table.row {
+  text-align: center;
+}
+
+

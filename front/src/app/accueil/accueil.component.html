@@ -1,0 +1,269 @@
+<app-header (click)="fullpage_api.moveTo('accueil', 1)"></app-header>
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+  <div class="section">
+    <div id="box" (click)="fullpage_api.moveTo('dirigeant',2)">
+      <div class="container-titre">
+        <img src="assets/images/U4U_developpeur_ambitions.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="section" (click)="fullpage_api.moveSectionDown()">
+    <div class="container-fluid">
+      <app-dirigeant></app-dirigeant>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container-fluid">
+      <app-forum (click)="fullpage_api.moveTo('nous-rejoindre',3)"></app-forum>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container-fluid">
+      <app-qui-sommes-nous></app-qui-sommes-nous>
+    </div>
+  </div>
+  <div class="section col">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="card-body">
+          <h6 class="card-title text-right">Développeur ?</h6>
+          <p class="card-text text-right">Recherche de <span class="oliveBack">l'excellence du code.</span><br>
+            Nos collaborateurs sont, avant tout, des opérationnels du code. Le recrutement de nos collaborateurs évalue la
+            performance et maîtrise technique : connaissances générales en IT, les <span class="oliveBack">compétences en architectures </span>,
+            maîtrisede langages variés dans leur domaine
+          </p>
+      </div>
+    </div>
+      <img src="assets/images/USFORYOU_Client.png" class="col-lg-5" alt="...">
+      <img src="assets/images/USFORYOU_Offre.png" class="col-lg-5">
+      <div class="col-lg-5">
+        <div class="card-body">
+          <p class="card-text text-left">
+            Un Système d'information "USFORYOU" fait pour <br><span class="oliveBack">libérer les initiatives</span> de nos
+            collaborateurs dans l'entreprise. Le S.I d'usforyou est intégralement construit <span class="oliveBack">dans le CLOUD.</span><br>
+            Aucune infrastructure privée, toute notre S.I et nos solutions sont interconnectées et permettent, le télétravail,
+            le collaboratif.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!--<div class="card-img">
+        <div class="row no-gutters">
+
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text text-right">
+                Un Système d'information "USFORYOU" fait pour <br><span class="oliveBack">libérer les initiatives</span> de nos
+                collaborateurs dans l'entreprise. Le S.I d'usforyou est intégralement construit <span class="oliveBack">dans le CLOUD.</span><br>
+                Aucune infrastructure privée, toute notre S.I et nos solutions sont interconnectées et permettent, le télétravail,
+                le collaboratif.
+              </p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/images/USFORYOU_Offre.png" class="card-img" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="card-img">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/images/USFORYOU_Developpeur.png" class="card-img" alt="..."/>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text">L'esprit d'équipe et de réussites en commun !
+                <span class="oliveBack">Les collaborateurs sont intéressés</span> au projet de l'entreprise.
+                Ils animent leur communauté par domaine et veillent sur nos choix technologiques. Rien ne se réussit sans partage de connaissance</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+  <div class="section">
+    <div class="container-fluid">
+      <app-form></app-form>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container-fluid">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--<div class="container-fluid">
+  <div class="row" >
+
+    <div class="col-lg-8">
+      <img src="assets/images/U4U_developpeur_ambitions.png" class="row-cols-1">
+      <a class="btn btn-primary row-cols-lg-7" id="btnAcces" href="#btnCollabo">ACCES COLLABORATEUR</a>
+    </div>
+  </div>
+</div>-->
+<!--
+<div class="img-fluid d-inline-block">
+      <img src="assets/images/developpeur ambitions.png" class="img-fluid">
+&lt;!&ndash;  <div style="position: relative" class="col">
+    <a class="btn btn-primary btn-sm" id="btnAcces" href="#btnCollabo">ACCES COLLABORATEUR</a>
+  </div>&ndash;&gt;
+</div>-->
+
+<!--<div class="container align-content-center">
+  <div class="row text-center">
+    <div class="col-sm">
+      <img src="assets/images/USFORYOU_Data.png" style="max-height:35px"/>
+        <span class="offresBtn"> DATA</span></div>
+    <div class="col-sm">
+      <img src="assets/images/USFORYOU_Digital.png" style="max-height:35px"/>
+      <span class="offresBtn"> DIGITAL</span></div>
+    <div class="col-sm">
+      <img src="assets/images/USFORYOU_Risk.png" style="max-height:35px"/>
+      <span class="offresBtn"> IT RISK</span></div>
+  </div>
+</div><br><br><br>
+<div class="container-lg">
+  <img src="assets/images/U4U_excellence_code.png" class="card-img"/>
+</div><br><br><br><br>
+<div class="container-lg">
+  <div class="card-img">
+    <div class="row no-gutters">
+      <div class="col-md-8">
+        <img src="assets/images/USFORYOU_Carriere.png" class="card-img" alt="...">
+      </div>
+      <div class="col-md-4">
+        <div class="card-body">
+          <h5 class="card-title">Forum EPSI | MARS 31, 2020.</h5>
+          <p class="card-text">Nous serons sur le forum Alternant de l’EPSI ce 07 avril 2020.
+
+            N’hésitez pas à venir nous rejoindre.
+
+          </p>
+          <a class="btn btn-dark" href="https://www.facebook.com/usforyou.net/">
+          <img src="/assets/images/logoFB.png" class="img-fluid" alt="Image" width="30" height="30" alt=""/>
+          </a>
+          <a class="btn btn-dark" href="https://twitter.com/">
+          <img src="/assets/images/logoTwitter.png" class="img-fluid" alt="Image" width="30" height="30" alt=""/>
+          </a>
+          <a class="btn btn-dark" href="https://www.linkedin.com/company/usforyou/">
+          <img src="/assets/images/logoLinkedIn.png" class="img-fluid" alt="Image" width="30" height="30" alt=""/>
+          </a>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+
+
+<!--
+
+<section class="wrapper">
+
+  <main class="content">
+    <ul class="scroll">
+      <li class="item">
+        <div><img src="assets/images/developpeur%20ambitions.png" alt="" title="" class="card-img"/></div>
+      </li>
+      <li class="item">
+        <div>
+          <div>
+          <img src="assets/images/U4U_excellence_code.png" class="card-img"/>
+        </div>
+        </div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
+      </li>
+      <li class="item">
+        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
+      </li>
+    </ul>
+  </main>
+</section>
+
+
+
+-->

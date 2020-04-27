@@ -1,0 +1,45 @@
+.dropdown-toggle::after {
+  content: none;
+}
+button.navbar-toggler {
+  background-color: black;
+  margin-left: 85%;
+  border-color: black;
+}
+
+nav.navbar {
+  background-color: black;
+  padding: 0;
+}
+
+.btn-outline {
+  background-color: black;
+  outline-color: black;
+}
+
+.btn-dark {
+  outline-color: black;
+  background-color: black;
+  border-color: black;
+}
+
+
+a.navbar-brand {
+  padding: 0;
+  color: black;
+}
+
+
+div.bg-dark.dropdown-menu.show {
+  width: 202.61px;
+
+}
+
+div.col-sm-4 {
+  padding-left: 0;
+}
+
+ul.col-sm-4 {
+  margin-left: 20px;
+}
+

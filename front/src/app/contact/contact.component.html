@@ -1,0 +1,93 @@
+
+
+<!--
+civ: string;
+nom: string;
+prenom: string;
+email: string;
+phone: number;
+dispoDate: string;
+poste: string;
+pretention: number;
+msg: string;
+cv: string;
+conditionsUtilisation: string;
+-->
+
+  <div class="table-responsive" *ngFor="let c of postContact$ | async">
+    <table class="table">
+      <thead>
+      <tr class="table-row">
+        <th scope="col" class="th-Contact">
+          <a class="btn btn-outline-warning btn-sm float-left" (click)="pastEtat()">ETAT PRECEDENT</a>
+        </th>
+       <th scope="col" class="th-Contact"><h5>CONTACT</h5>
+          <a class="btn btn-outline-success btn-sm float-right" (click)="nextEtat()">ETAT SUIVANT</a>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">ETAT</th>
+        <td>{{etat$}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Matricule</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Civilité</th>
+        <td>{{c.civ}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Nom</th>
+        <td>{{c.nom}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Prénom</th>
+        <td>{{c.prenom}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Date/Heure de création</th>
+        <td>{{c.createdOn}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td>{{c.email}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Téléphone</th>
+        <td>{{c.phone}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Date de disponibilité</th>
+        <td>{{c.dispoDate}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Poste</th>
+        <td>{{c.poste}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Message</th>
+        <td>{{c.msg}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Prentention</th>
+        <td>{{c.pretention}}</td>
+      </tr>
+      <tr>
+        <th scope="row">CV</th>
+        <td>{{c.cv}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!--
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+  });
+</script>
+-->
