@@ -1,6 +1,6 @@
 
-<app-header></app-header>
-<div (click)="fullpage_api.moveTo('accueil',1)"></div>
+<app-header (click)="fullpage_api.moveTo('accueil',1)"></app-header>
+
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
   <div class="section"(click)="fullpage_api.moveTo('dirigeant',2)">
     <div id="box" (click)="fullpage_api.moveTo('forum',3)">
