@@ -1,31 +1,32 @@
-<app-header (click)="fullpage_api.moveTo('accueil', 1)"></app-header>
+
+<app-header (click)="fullpage_api.moveTo('accueil',1)"></app-header>
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
-  <div class="section">
-    <div id="box" (click)="fullpage_api.moveTo('dirigeant',2)">
+  <div class="section"(click)="fullpage_api.moveTo('dirigeant',2)">
+    <div id="box" (click)="fullpage_api.moveTo('forum',3)">
       <div class="container-titre">
         <img src="assets/images/U4U_developpeur_ambitions.png" class="img-fluid">
       </div>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveSectionDown()">
+  <div class="section" (click)="fullpage_api.moveTo('qui-sommes-nous',4)" >
     <div class="container-fluid">
-      <app-dirigeant></app-dirigeant>
+      <app-dirigeant ></app-dirigeant>
     </div>
   </div>
-  <div class="section">
+  <div class="section" (click)="fullpage_api.moveTo('etat-esprit',5)">
     <div class="container-fluid">
-      <app-forum (click)="fullpage_api.moveTo('nous-rejoindre',3)"></app-forum>
+      <app-forum></app-forum>
     </div>
   </div>
-  <div class="section">
+  <div class="section" >
     <div class="container-fluid">
-      <app-qui-sommes-nous></app-qui-sommes-nous>
+      <app-qui-sommes-nous (click)="fullpage_api.moveTo('nous-rejoindre',6)"></app-qui-sommes-nous>
     </div>
   </div>
-  <div class="section col">
+  <div class="section" (click)="fullpage_api.moveTo('footer',7)">
     <div class="row">
-      <div class="col-lg-5">
-        <div class="card-body">
+      <div class="col-md-5">
+        <div class="card-body" >
           <h6 class="card-title text-right">Développeur ?</h6>
           <p class="card-text text-right">Recherche de <span class="oliveBack">l'excellence du code.</span><br>
             Nos collaborateurs sont, avant tout, des opérationnels du code. Le recrutement de nos collaborateurs évalue la
@@ -34,9 +35,9 @@
           </p>
       </div>
     </div>
-      <img src="assets/images/USFORYOU_Client.png" class="col-lg-5" alt="...">
-      <img src="assets/images/USFORYOU_Offre.png" class="col-lg-5">
-      <div class="col-lg-5">
+      <img src="assets/images/USFORYOU_Client.png" class="col-md-5" alt="...">
+      <img src="assets/images/USFORYOU_Offre.png" class="col-md-5">
+      <div class="col-md-5">
         <div class="card-body">
           <p class="card-text text-left">
             Un Système d'information "USFORYOU" fait pour <br><span class="oliveBack">libérer les initiatives</span> de nos
@@ -48,6 +49,15 @@
       </div>
     </div>
   </div>
+  <div class="section" (click)="fullpage_api.moveTo('accueil',1)">
+    <app-form></app-form>
+  </div>
+  <div class="section">
+    <div class="container-fluid">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
 
       <!--<div class="card-img">
         <div class="row no-gutters">
@@ -87,17 +97,7 @@
       </div>
     </div>-->
 
-  <div class="section">
-    <div class="container-fluid">
-      <app-form></app-form>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container-fluid">
-      <app-footer></app-footer>
-    </div>
-  </div>
-</div>
+
 
 
 
