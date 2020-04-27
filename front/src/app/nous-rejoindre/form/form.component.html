@@ -1,98 +1,69 @@
 <form [formGroup]="creationForm" #formDirective= "ngForm" (submit)="createContact(formDirective)" class="text-center text-xl-center">
-  <div class="align-self-center">
-    <div class="form-group row justify-content-center">
-      <div class="form-group">
-        <span class="text-primary">VOUS</span>
-        <label class="col-sm-12 col-form-label" for="inputCiv">Civilité*</label>
-        <div class="col-sm-12">
-
-          <select class="form-control" id="inputCiv" formControlName="civ">
-            <option selected></option>
-            <option>M.</option>
-            <option>Mme.</option>
-          </select>
-        </div>
-
-        <label class="col-sm-12 col-form-label" for="inputLastName">Nom*</label>
-        <div class="col-sm-12">
-          <input class="form-control" id="inputLastName" placeholder="Nom" type="text" formControlName="nom">
-        </div>
-
-        <label class="col-sm-12 col-form-label" for="inputFirstName">Prénom*</label>
-        <div class="col-sm-12">
-          <input class="form-control" id="inputFirstName" placeholder="Prénom" type="text" formControlName="prenom">
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <span class="text-primary">VOUS</span><br>
+        <label class="form-label" for="inputCiv">Civilité*</label>
+        <select class="form-control" id="inputCiv" formControlName="civ" required>
+          <option selected></option>
+          <option>M.</option>
+          <option>Mme.</option>
+        </select>
+        <label class="form-label" for="inputLastName">Nom*</label>
+        <input class="form-control" id="inputLastName" placeholder="Nom" type="text" formControlName="nom" required>
+        <label class="form-label" for="inputFirstName">Prénom*</label>
+        <input class="form-control" id="inputFirstName" placeholder="Prénom" type="text" formControlName="prenom" required>
       </div>
-
-      <div class="form-group">
-        <span class="text-primary">CONTACT</span>
-        <label class="col-sm-12 col-form-label" for="inputEmail">Email*</label>
-        <div class="col-sm-12">
-          <input class="form-control" id="inputEmail" placeholder="email" type="email" formControlName="email">
-        </div>
-
-        <label class="col-sm-12 col-form-label" for="inputTel">Téléphone*</label>
-        <div class="col-sm-12">
-          <input class="form-control" id="inputTel" placeholder="Téléphone" type="tel" formControlName="phone">
-        </div>
+      <div class="col-sm-3">
+        <span class="text-primary">CONTACT</span><br>
+        <label class="form-label" for="inputEmail">Email*</label>
+        <input class="form-control" id="inputEmail" placeholder="email" type="email" formControlName="email" required>
+        <label class="form-label" for="inputTel">Téléphone*</label>
+        <input class="form-control" id="inputTel" placeholder="Téléphone" type="tel" formControlName="phone" required>
       </div>
-      <div class="col-sm-2"></div>
-
-      <div class="form-group row justify-content-center">
-        <div class="form-group">
-          <span class="text-primary">POSTE</span><br>
-
-          <label class="col-sm-12 col-form-label" for="inputDate">Date de disponibilité*</label>
-          <div class="col-sm-12">
-            <input class="form-control" id="inputDate" placeholder="" type="date" formControlName="dispoDate">
-          </div>
-
-          <div class="form-group col-sm-12">
-            <label for="inputPoste">Poste actif</label>
-            <select class="form-control" id="inputPoste" formControlName="poste">
-              <option selected>Aucun</option>
-              <option>CDI</option>
-              <option>CDD</option>
-            </select>
-          </div>
-        </div>
+      <div class="col-sm-3">
+        <span class="text-primary">POSTE</span><br>
+        <label class="form-label" for="inputDate">Date de disponibilité*</label>
+        <input class="form-control" id="inputDate" placeholder="" type="date" formControlName="dispoDate" required>
+        <label for="inputPoste">Poste actif</label>
+        <select class="form-control" id="inputPoste" formControlName="poste">
+          <option selected>Aucun</option>
+          <option>CDI</option>
+          <option>CDD</option>
+        </select>
+      </div>
+      <div class="col-sm-3"><span></span><br>
+        <label class="form-label" for="inputContractType">Contrat*</label>
+        <select class="form-control" id="inputContractType" formControlName="civ" required>
+          <option selected>CANDIDATURE SPONTANEE</option>
+          <option>POSTES OUVERTS</option>
+          <option>DEMANDE DE STAGE</option>
+          <option>INDEPENDANT FREELANCE</option>
+          <option>POEI RECONVERSION</option>
+        </select>
+        <label class="form-label" for="inputMontant">Prétention</label>
+        <input class="form-control" id="inputMontant" placeholder="Montant en K€" type="number" formControlName="pretention">
+      </div>
     </div>
-
-      <div class="form-group">
-        <br>
-        <label class="col-sm-12 col-form-label" for="inputMontant">Prétention</label>
-        <div class="col-sm-12">
-          <input class="form-control" id="inputMontant" placeholder="Montant en K€" type="number" formControlName="pretention">
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="form-group row justify-content-center">
-      <div class="form-group col-xl-6">
-        <span class="text-primary">MESSAGE*</span><br>
-        <div class="">
-          <textarea class="form-control" id="inputMessage" placeholder="Messge ici d'au moins 200 caractères" rows="5" formControlName="msg"></textarea><br>
-        </div>
-      </div>
-      <div class="form-group col-xl-6">
+    <div class="row">
+      <div class="col-sm-12">
+        <label class="form-label text-primary">MESSAGE*</label><br>
+        <textarea class="form-control" id="inputMessage" placeholder="Message ici d'au moins 200 caractères" rows="3" formControlName="msg"  required minlength="2"></textarea>
         <span class="text-primary">FICHIER*</span><br>
         <div class="form-group custom-file">
-          <input type="file" class="custom-file-input" id="inputCV" formControlName="cv">
+          <input type="file" class="custom-file-input" id="inputCV" formControlName="cv" required>
           <label class="custom-file-label" for="inputCV" data-browse="Choisir un fichier">Votre CV au format PDF</label>
         </div>
+        <div class="form-check">
+          <input class="form-check-input" id="checkTerms" type="checkbox" value="" formControlName="conditionsUtilisation" required>
+          <label class="form-check-label" for="checkTerms">
+            J'accepte les conditions d'utilisation de mes données personnelles <br>
+            détaillées ici dans le formulaire données personnelles.
+          </label>
+        </div>
+        <button class="btn btn-dark" type="submit">SOUMETTRE</button>
       </div>
 
     </div>
-
-    <div class="form-check">
-      <input class="form-check-input" id="checkTerms" type="checkbox" value="" formControlName="conditionsUtilisation">
-      <label class="form-check-label" for="checkTerms">
-        J'accepte les conditions d'utilisation de mes données personnelles <br>
-        détaillées ici dans le formulaire données personnelles.
-      </label>
-    </div>
-    <button class="btn btn-dark" type="submit">SOUMETTRE</button>
   </div>
 </form>
