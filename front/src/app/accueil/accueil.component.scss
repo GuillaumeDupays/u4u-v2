@@ -6,6 +6,8 @@
   background-image:url("src/assets/images/USFORYOU_Developpeur.png");
   background-size:cover;
   background-repeat: no-repeat;
+  justify-content: center;
+  align-content: center;
 }
 
 .container-titre {
@@ -18,8 +20,8 @@
 .img-fluid {
   max-width:80%;
   max-height:80%;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding: 1%;
+
 }
 
 .img-fluid-2 {
@@ -44,7 +46,7 @@ img.col-md-5 {
 div.row {
   align-content: center;
   justify-content: center;
-  padding: 1%;
+  padding: 5%;
 
 }
 

@@ -14,7 +14,9 @@ export class AccueilComponent {
     this.config = {
       // fullpage options
       licenseKey: 'YOUR LICENSE KEY HERE',
-      anchors: ['accueil','dirigeant', 'forum','qui-sommes-nous','etat-esprit', 'nous-rejoindre', 'footer'],
+      anchors: ['accueil','dirigeant', 'forum','qui-sommes-nous',
+                'etat-esprit', 'nous-rejoindre', 'collaborateur','nos-offres',
+                'data','digital','it-risk', 'footer'],
       menu: '#accueil',
 
       // fullpage callbacks

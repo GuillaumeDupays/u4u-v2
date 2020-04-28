@@ -31,6 +31,7 @@ import { StoreModule } from '@ngrx/store';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { ForumComponent } from './forum/forum.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { ForumComponent } from './forum/forum.component';
     AdminComponent,
     ContactComponent,
     ForumComponent,
+
 
   ],
   imports: [
