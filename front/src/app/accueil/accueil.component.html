@@ -19,9 +19,9 @@
       <app-forum></app-forum>
     </div>
   </div>
-  <div class="section" >
+  <div class="section" (click)="fullpage_api.moveTo('nous-rejoindre',6)">
     <div class="row">
-      <app-qui-sommes-nous (click)="fullpage_api.moveTo('nous-rejoindre',6)"></app-qui-sommes-nous>
+      <app-qui-sommes-nous ></app-qui-sommes-nous>
     </div>
   </div>
   <div class="section" (click)="fullpage_api.moveTo('collaborateur',7)">
@@ -50,7 +50,7 @@
       </div>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('nos-offres',8)">
+  <div class="section" > <!--(click)="fullpage_api.moveTo('nos-offres',8)"-->
       <div class="row">
         <app-form></app-form>
       </div>
@@ -77,7 +77,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="row">
+    <div class="container-fluid">
       <app-footer></app-footer>
     </div>
   </div>

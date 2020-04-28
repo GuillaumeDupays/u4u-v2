@@ -39,13 +39,11 @@ div.container-fluid {
   background-color: olive;
 }
 
-img.col-md-5 {
-  padding: 0;
-}
 
 div.row {
   align-content: center;
   justify-content: center;
+  display: flex;
   padding: 5%;
 
 }
@@ -62,3 +60,4 @@ col {
   margin-left: 1%;
   margin-right: 1%;
 }
+

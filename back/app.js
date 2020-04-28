@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const api = require('./api/v1/index');
+const auth = require('./auth/routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -13,7 +14,51 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({credentials: true, origin: 'http://vps815314.ovh.net:4200'}));
 
+//passport
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const Strategy = require('passport-local').Strategy;
+const User = require('./auth/models/user');
+
+app.use(cookieParser());
+app.use(session({
+   secret: 'mon super secret',
+   resave: true,
+   saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser((user, cb) => {
+   cb(null, user);
+});
+
+passport.deserializeUser((user, cb)=> {
+   cb(null, user);
+});
+
+passport.use(new Strategy({
+   usernameField: 'username',
+   passwordField: 'password'
+}, (nom, pwd, cb) => {
+   User.findOne({ username: nom }, ( err, user) => {
+      if (err) {
+         console.error(`on ne trouve pas ${nom} dans MongoDb`, err);
+      }
+      if (user.password !== pwd) {
+         console.log(`mauvais mot de passe concernant ${nom} dans MongoDb`, err)
+      } else {
+         console.log(`${nom} trouvé dans MongoDb et authentifié`);
+         cb(null, user);
+      }
+   });
+}));
+
+
 app.use('/api/v1', api);
+app.use('/auth', auth);
+
 app.use((req, res) => {
    const err = new Error('404 - Non trouvé');
    err.status = 500;
