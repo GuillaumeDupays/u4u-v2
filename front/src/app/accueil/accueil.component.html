@@ -1,83 +1,78 @@
 
-<app-header (click)="fullpage_api.moveTo('accueil',1)"></app-header>
+<app-header (click)="fullpage_api.moveTo('accueil')"></app-header>
 
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
-  <div class="section"(click)="fullpage_api.moveTo('dirigeant',2)">
-    <div id="box" (click)="fullpage_api.moveTo('forum',3)">
-      <div class="container-titre">
+
+  <div class="section" (click)="fullpage_api.moveTo('dirigeant',2)">
+    <div id="box">
+      <div class="fp-tableCell">
         <img src="assets/images/U4U_developpeur_ambitions.png" class="img-fluid">
       </div>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('qui-sommes-nous',4)" >
-    <div class="row">
+
+  <div class="section" (click)="fullpage_api.moveTo('forum',3)">
+    <div class="fp-tableCell">
       <app-dirigeant ></app-dirigeant>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('etat-esprit',5)">
-    <div class="row">
+
+  <div class="section" (click)="fullpage_api.moveTo('qui-sommes-nous',4)">
+    <div class="fp-tableCell">
       <app-forum></app-forum>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('nous-rejoindre',6)">
-    <div class="row">
+
+  <div class="section" (click)="fullpage_api.moveTo('etat-d-esprit',5)">
+    <div class="fp-tableCell">
       <app-qui-sommes-nous ></app-qui-sommes-nous>
     </div>
   </div>
-  <div class="section" (click)="fullpage_api.moveTo('collaborateur',7)">
-    <div class="row">
-      <div class="col-md-5">
-        <div class="card-body" >
-          <h6 class="card-title text-right">Développeur ?</h6>
-          <p class="card-text text-right">Recherche de <span class="oliveBack">l'excellence du code.</span><br>
-            Nos collaborateurs sont, avant tout, des opérationnels du code. Le recrutement de nos collaborateurs évalue la
-            performance et maîtrise technique : connaissances générales en IT, les <span class="oliveBack">compétences en architectures </span>,
-            maîtrisede langages variés dans leur domaine
-          </p>
-      </div>
-    </div>
-      <img src="assets/images/USFORYOU_Client.png" class="col-md-5" alt="...">
-      <img src="assets/images/USFORYOU_Offre.png" class="col-md-5">
-      <div class="col-md-5">
-        <div class="card-body">
-          <p class="card-text text-left">
-            Un Système d'information "USFORYOU" fait pour <br><span class="oliveBack">libérer les initiatives</span> de nos
-            collaborateurs dans l'entreprise. Le S.I d'usforyou est intégralement construit <span class="oliveBack">dans le CLOUD.</span><br>
-            Aucune infrastructure privée, toute notre S.I et nos solutions sont interconnectées et permettent, le télétravail,
-            le collaboratif.
-          </p>
-        </div>
-      </div>
+
+  <div class="section" (click)="fullpage_api.moveTo('valeurs',6)">
+    <div class="fp-tableCell">
+      <app-etat-esprit></app-etat-esprit>
     </div>
   </div>
-  <div class="section" > <!--(click)="fullpage_api.moveTo('nos-offres',8)"-->
-      <div class="row">
-        <app-form></app-form>
-      </div>
-    </div>
-  <div class="section" (click)="fullpage_api.moveTo('data',9)">
-    <div class="row">
-      <img src="assets/images/U4Y_NosOffresDeCompetences.png" class="img-fluid"/>
+
+  <div class="section" (click)="fullpage_api.moveTo('nous-rejoindre',7)">
+    <div class="fp-tableCell">
+      <app-valeurs></app-valeurs>
     </div>
   </div>
-  <div></div>
-  <div class="section" (click)="fullpage_api.moveTo('digital',10)">
-    <div class="row">
-      <img src="assets/images/U4U_Carriere.png" class="img-fluid"/>
-    </div>
-  </div>
-  <div class="section" (click)="fullpage_api.moveTo('it-risk',11)">
-    <div class="row">
-      <img src="assets/images/U4Y_Digital.png" class="img-fluid"/>
-    </div>
-  </div>
-  <div class="section" (click)="fullpage_api.moveTo('footer',12)">
-    <div class="row">
-      <img src="assets/images/U4Y_ItRisk.png" class="img-fluid"/>
-    </div>
-  </div>
+
   <div class="section">
-    <div class="container-fluid">
+    <div class="fp-tableCell">
+        <app-form></app-form>
+    </div>
+  </div>
+
+  <div class="section" (click)="fullpage_api.moveTo('data',8)"> <!--(click)="fullpage_api.moveTo('nos-offres',8)"-->
+    <div class="fp-tableCell">
+      <img src="assets/images/U4Y_NosOffresDeCompetences.png" class="img-fluid4"/>
+    </div>
+  </div>
+
+  <div class="section" (click)="fullpage_api.moveTo('digital',9)" >
+    <div class="fp-tableCell">
+      <app-data></app-data>
+    </div>
+  </div>
+
+  <div class="section" (click)="fullpage_api.moveTo('it-risk',10)" >
+    <div  class="fp-tableCell">
+      <app-digital></app-digital>
+    </div>
+  </div>
+
+  <div class="section" (click)="fullpage_api.moveTo('footer',11)">
+    <div class="fp-tableCell">
+      <app-it-risk></app-it-risk>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container-lg">
       <app-footer></app-footer>
     </div>
   </div>
@@ -184,111 +179,8 @@
           <img src="/assets/images/logoLinkedIn.png" class="img-fluid" alt="Image" width="30" height="30" alt=""/>
           </a>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+        </div
       </div>
     </div>
   </div>
 </div>-->
-
-
-
-
-
-<!--
-
-<section class="wrapper">
-
-  <main class="content">
-    <ul class="scroll">
-      <li class="item">
-        <div><img src="assets/images/developpeur%20ambitions.png" alt="" title="" class="card-img"/></div>
-      </li>
-      <li class="item">
-        <div>
-          <div>
-          <img src="assets/images/U4U_excellence_code.png" class="card-img"/>
-        </div>
-        </div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-      </li>
-      <li class="item">
-        <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-      </li>
-    </ul>
-  </main>
-</section>
-
-
-
--->

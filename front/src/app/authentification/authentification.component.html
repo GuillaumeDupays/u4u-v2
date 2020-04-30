@@ -1,0 +1,15 @@
+
+<form #loginForm= "ngForm" (ngSubmit)="accesLogin()">
+
+  <div class="container">
+
+    <div class="col-form-label">
+      <h6>ESPACE COLLABORATEUR</h6><br><br>
+      <div>
+        <input class="input-group-text" type="text" placeholder="Nom d'utilisateur" name="username" id="username" [(ngModel)]="user.username" required><br>
+        <input class="input-group-text" type="text" placeholder="Mot de passe" name="password" id="password" [(ngModel)]="user.password" required><br>
+      </div>
+    </div>
+    <button class="btn btn-outline-primary" type="submit" [disabled]="loginForm.form.valid">Connexion</button>
+  </div>
+</form>

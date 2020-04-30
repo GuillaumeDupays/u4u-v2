@@ -26,6 +26,7 @@ app.use(session({
    secret: 'mon super secret',
    resave: true,
    saveUninitialized: true,
+   name: 'usforyou-cookie'
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -45,6 +46,7 @@ passport.use(new Strategy({
    User.findOne({ username: nom }, ( err, user) => {
       if (err) {
          console.error(`on ne trouve pas ${nom} dans MongoDb`, err);
+         cb(null,false);
       }
       if (user.password !== pwd) {
          console.log(`mauvais mot de passe concernant ${nom} dans MongoDb`, err)

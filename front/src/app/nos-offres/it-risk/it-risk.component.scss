@@ -1,0 +1,40 @@
+
+#box {
+  justify-content: center;
+  align-content: center;
+
+}
+
+#box2 {
+  justify-content: center;
+  align-content: center;
+}
+
+.oliveBack{
+  background-color: olive;
+}
+
+.overlay-image {
+  position: relative;
+  width: 100%;
+
+}
+
+.overlay-image .image{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-image .text {
+  line-height: 1.5em;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 70%;
+  min-height: 60%;
+
+}
+

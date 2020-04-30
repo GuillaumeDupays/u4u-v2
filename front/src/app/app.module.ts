@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
-import { NosOffresComponent } from './nos-offres/nos-offres.component';
+
 import { NousRejoindreComponent } from './nous-rejoindre/nous-rejoindre.component';
 import { CollaborateurComponent } from './nous-rejoindre/collaborateur/collaborateur.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,7 +22,7 @@ import { ActionnaireComponent } from './nous-rejoindre/actionnaire/actionnaire.c
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './nous-rejoindre/form/form.component';
-import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
@@ -30,6 +30,7 @@ import { ContactComponent } from './contact/contact.component';
 import { StoreModule } from '@ngrx/store';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { ForumComponent } from './forum/forum.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { ForumComponent } from './forum/forum.component';
     AppComponent,
     AccueilComponent,
     QuiSommesNousComponent,
-    NosOffresComponent,
+
     NousRejoindreComponent,
     CollaborateurComponent,
     DirigeantComponent,
@@ -55,6 +56,7 @@ import { ForumComponent } from './forum/forum.component';
     AdminComponent,
     ContactComponent,
     ForumComponent,
+    AuthentificationComponent,
 
 
   ],

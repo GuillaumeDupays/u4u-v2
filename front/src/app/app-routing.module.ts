@@ -13,13 +13,15 @@ import {AgenceComponent} from './nous-rejoindre/agence/agence.component';
 import {ActionnaireComponent} from './nous-rejoindre/actionnaire/actionnaire.component';
 import {FormComponent} from "./nous-rejoindre/form/form.component";
 import { HttpClientModule } from '@angular/common/http';
-import {NosOffresComponent} from "./nos-offres/nos-offres.component";
+
+import {AuthentificationComponent} from "./authentification/authentification.component";
 
 
 
 const routes: Routes = [
 
   { path: '', component: AccueilComponent },
+  { path: 'acces-collaborateur', component : AuthentificationComponent }
 
 /*
     { path: 'dirigeant', component: DirigeantComponent },

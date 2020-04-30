@@ -1,7 +1,7 @@
-<form [formGroup]="creationForm" #formDirective= "ngForm" (submit)="createContact(formDirective)" class="text-center text-xl-center">
-  <div class="container">
+<form [formGroup]="creationForm" #formDirective= "ngForm" (submit)="createContact(formDirective)" class="text-center">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <span class="text-primary">VOUS</span><br>
         <label class="form-label" for="inputCiv">Civilité*</label>
         <select class="form-control" id="inputCiv" formControlName="civ" required>
@@ -14,14 +14,14 @@
         <label class="form-label" for="inputFirstName">Prénom*</label>
         <input class="form-control" id="inputFirstName" placeholder="Prénom" type="text" formControlName="prenom" required>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <span class="text-primary">CONTACT</span><br>
         <label class="form-label" for="inputEmail">Email*</label>
         <input class="form-control" id="inputEmail" placeholder="email" type="email" formControlName="email" required>
         <label class="form-label" for="inputTel">Téléphone*</label>
         <input class="form-control" id="inputTel" placeholder="Téléphone" type="tel" formControlName="phone" required>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <span class="text-primary">POSTE</span><br>
         <label class="form-label" for="inputDate">Date de disponibilité*</label>
         <input class="form-control" id="inputDate" placeholder="" type="date" formControlName="dispoDate" required>
@@ -32,7 +32,7 @@
           <option>CDD</option>
         </select>
       </div>
-      <div class="col-sm-3"><span></span><br>
+      <div class="col-sm-4"><span></span><br>
         <label class="form-label" for="inputContractType">Contrat*</label>
         <select class="form-control" id="inputContractType" formControlName="civ" required>
           <option selected>CANDIDATURE SPONTANEE</option>
