@@ -1,9 +1,16 @@
-#box {
-  margin: 1%;
+.row {
+
+  align-content: center;
+  justify-content: center;
 }
 
 .oliveBack{
   background-color: olive;
 }
 
+
+.card-img{
+  max-height: 150px;
+  max-width: 150px;
+}
 

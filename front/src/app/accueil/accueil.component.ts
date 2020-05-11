@@ -17,6 +17,12 @@ export class AccueilComponent {
       anchors: ['accueil','dirigeant', 'forum', 'qui-sommes-nous', 'etat-esprit', 'valeurs',
         'nous-rejoindre', 'nos-offres','data','digital','it-risk', 'footer'],
       menu: '#accueil',
+      navigation: false,
+      navigationPosition: 'right',
+      responsiveWidth: 900,
+
+      afterResponsive: function(isResponsive){
+      },
 
       // fullpage callbacks
       afterResize: () => {

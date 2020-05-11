@@ -1,57 +1,74 @@
 
-<app-header (click)="fullpage_api.moveTo('accueil')"></app-header>
+<app-header></app-header>
 
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
 
-  <div class="section" (click)="fullpage_api.moveTo('dirigeant',2)">
+  <div class="section" (click)="fullpage_api.moveTo('dirigeant',1)" >
     <div id="box">
-      <div class="fp-tableCell">
+      <div class="row">
         <img src="assets/images/U4U_developpeur_ambitions.png" class="img-fluid">
       </div>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('forum',3)">
+  <div class="section" (click)="fullpage_api.moveTo('forum',2)">
     <div class="fp-tableCell">
-      <app-dirigeant ></app-dirigeant>
+      <app-dirigeant></app-dirigeant>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('qui-sommes-nous',4)">
+  <div class="section" (click)="fullpage_api.moveTo('qui-sommes-nous',3)">
     <div class="fp-tableCell">
       <app-forum></app-forum>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('etat-d-esprit',5)">
+  <div class="section" (click)="fullpage_api.moveTo('etat-d-esprit',4)">
+    <div id="box_b">
     <div class="fp-tableCell">
-      <app-qui-sommes-nous ></app-qui-sommes-nous>
+      <app-qui-sommes-nous></app-qui-sommes-nous>
+    </div>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('valeurs',6)">
+  <div class="section" (click)="fullpage_api.moveTo('valeurs',5)">
     <div class="fp-tableCell">
       <app-etat-esprit></app-etat-esprit>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('nous-rejoindre',7)">
+  <div class="section" (click)="fullpage_api.moveTo('nous-rejoindre',6)">
     <div class="fp-tableCell">
       <app-valeurs></app-valeurs>
     </div>
   </div>
 
   <div class="section">
-    <div class="row">
+    <div class="fp-table">
         <app-form></app-form>
     </div>
   </div>
 
-  <div class="section" (click)="fullpage_api.moveTo('data',8)"> <!--(click)="fullpage_api.moveTo('nos-offres',8)"-->
-    <div class="fp-tableCell">
-      <img src="assets/images/U4Y_NosOffresDeCompetences.png" class="img-fluid4"/>
+  <div class="section" (click)="fullpage_api.moveTo('data',8)">
+
+    <div class="center">
+      <div class="card-body">
+        <div id="hexa">
+      <h1>NOS OFFRES DE COMPETENCES</h1>
+      <p class="card-text">Réparties en 3 domaines, vous pourrez trouver des profils parmi les compétences suivantes :</p>
+        </div>
+        </div>
+      </div>
     </div>
-  </div>
+<!--      <div class="card-body">
+        <div id="hexa">
+        <h1>NOS OFFRES DE COMPETENCES</h1>
+        <div class="card-text">
+          <p>Réparties en 3 domaines, vous pourrez trouver des profils parmi les compétences suivantes :</p>
+        </div>
+        </div>
+        </div>-->
+
 
   <div class="section" (click)="fullpage_api.moveTo('digital',9)" >
     <div class="fp-tableCell">
@@ -60,7 +77,7 @@
   </div>
 
   <div class="section" (click)="fullpage_api.moveTo('it-risk',10)" >
-    <div  class="fp-tableCell">
+    <div class="fp-tableCell">
       <app-digital></app-digital>
     </div>
   </div>
@@ -76,8 +93,7 @@
       <app-footer></app-footer>
     </div>
   </div>
-</div>
-
+ </div>
 
       <!--<div class="card-img">
         <div class="row no-gutters">

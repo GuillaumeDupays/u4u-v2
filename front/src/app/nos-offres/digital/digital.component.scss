@@ -16,22 +16,23 @@
 .overlay-image {
   position: relative;
   width: 100%;
+  object-fit: cover;
 }
 
 .overlay-image .image{
-  display: block;
+  display: flex;
   width: 100%;
   height: auto;
 }
 
 .overlay-image .text {
-  line-height: 1.5em;
+
   text-align: left;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 70%;
+  min-width: 65%;
   min-height: 60%;
 }
 
