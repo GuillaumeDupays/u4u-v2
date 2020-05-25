@@ -7,7 +7,7 @@ import {Contact} from "../models/contact";
   providedIn: 'root'
 })
 export class ContactService {
-  baseUrl ='http://vps815314.ovh.net:3000/api/v1/contacts';
+  baseUrl ='http://localhost:3000/api/v1/contacts';
   // selectedContact: Contact;
   contacts: Contact[];
   'http://vps815314.ovh.net:3000/api/v1/contacts'/*

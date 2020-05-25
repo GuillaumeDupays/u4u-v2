@@ -12,7 +12,7 @@ app.set('port', (process.env.port || 3000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({credentials: true, origin: 'http://vps815314.ovh.net:4200'}));
+app.use(cors({credentials: true, origin: 'http://localhost:4200'}));
 
 //passport
 const passport = require('passport');
@@ -67,7 +67,7 @@ app.use((req, res) => {
    res.json({ msg: '404 - Non trouvé', err: err});
 });
 
-mongoose.connect('mongodb://vps815314.ovh.net:27017/contacts', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/contacts', { useNewUrlParser: true});
 connection.on('error', (err) => {
    console.error(`erreur de connexion vers MongoDb: ${err.message}`);
 });

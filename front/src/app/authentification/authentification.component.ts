@@ -15,6 +15,5 @@ export class AuthentificationComponent implements OnInit {
   }
 
   accesLogin() {
-
   }
 }

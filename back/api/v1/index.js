@@ -9,14 +9,14 @@ router.get('/ping', (req, res) => {
 });
 
 router.get('/contacts', (req, res) => {
-   Contact.find()
-       .sort({ 'createdOn': -1 })
-       .exec()
-       .then(post => res.status(200).json(post))
-       .catch(err => res.status(500).json({
-          message: 'contacts non trouvés',
-          error: err
-       }));
+        Contact.find()
+            .sort({ 'createdOn': -1 })
+            .exec()
+            .then(post => res.status(200).json(post))
+            .catch(err => res.status(500).json({
+                message: 'contacts non trouvés',
+                error: err
+            }));
 });//http://localhost:3000/api/v1/contacts
 
 router.get('/contacts/etat', (req, res) => {
