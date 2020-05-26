@@ -10,8 +10,8 @@ export class ContactService {
   baseUrl ='http://localhost:3000/api/v1/contacts';
   // selectedContact: Contact;
   contacts: Contact[];
-  'http://vps815314.ovh.net:3000/api/v1/contacts'/*
-*/'http://vps815314.ovh.net//var/www/angular/usForYou/back/api/v1/contacts';
+/*  'http://vps815314.ovh.net:3000/api/v1/contacts'
+'http://vps815314.ovh.net//var/www/angular/usForYou/back/api/v1/contacts';*/
 
 /*  Usforyou@vps815314.ovh.net -p 2270*/
 
