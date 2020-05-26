@@ -12,7 +12,7 @@ app.set('port', (process.env.port || 3000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({credentials: true, origin: 'http://localhost:4200'}));
+app.use(cors({credentials: true, origin: 'http://usforyou.net/#nous-rejoindre'}));
 // http://usforyou.net
 //passport
 const passport = require('passport');
