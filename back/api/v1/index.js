@@ -19,7 +19,7 @@ router.get('/contacts', (req, res) => {
             }));
 });//http://localhost:3000/api/v1/contacts
 
-router.get('/contacts/etat', (req, res) => {
+/*router.get('/contacts/etat', (req, res) => {
     Etat.find()
         .sort({ 'createdOn': -1 })
         .exec()
@@ -28,7 +28,7 @@ router.get('/contacts/etat', (req, res) => {
            message: 'etat non trouvé',
            error: err
         }));
-});//http://localhost:3000/api/v1/etat
+});//http://localhost:3000/api/v1/etat*/
 
 router.post('/contacts', (req, res ) => {
    console.log('req.body', req.body);
