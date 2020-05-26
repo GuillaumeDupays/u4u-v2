@@ -9,7 +9,7 @@ import {Contact} from "../models/contact";
 export class ContactService {
   baseUrl ='http://localhost:3000/api/v1/contacts';
   // selectedContact: Contact;
-  contacts: Contact[];
+
 /*  'http://vps815314.ovh.net:3000/api/v1/contacts'
 'http://vps815314.ovh.net//var/www/angular/usForYou/back/api/v1/contacts';*/
 

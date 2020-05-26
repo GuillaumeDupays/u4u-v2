@@ -29,6 +29,7 @@ creationForm: FormGroup;
       phone: '',
       dispoDate: '',
       poste: '',
+      contrat: '',
       pretention: '',
       msg: '',
       cv: '',

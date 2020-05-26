@@ -8,6 +8,7 @@ const ContactSchema = new mongoose.Schema({
     phone: Number,
     dispoDate: String,
     poste: String,
+    contrat: String,
     pretention: Number,
     msg: String,
     cv: String,

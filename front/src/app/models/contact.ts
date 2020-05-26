@@ -6,6 +6,7 @@ export interface Contact {
   phone: number;
   dispoDate: string;
   poste: string;
+  contrat: string;
   pretention: number;
   msg: string;
   cv: string;
