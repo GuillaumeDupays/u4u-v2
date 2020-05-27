@@ -2,7 +2,6 @@ const express = require ('express');
 const app = express();
 const api = require('./api/v1');
 const auth = require('./auth/routes');
-
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -68,7 +67,7 @@ app.use((req, res) => {
    res.json({ msg: '404 - Non trouvé', err: err});
 });
 
-mongoose.connect('mongodb://localhost:27017/contacts', { useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/contacts', { useNewUrlParser: true});
 connection.on('error', (err) => {
    console.error(`erreur de connexion vers MongoDb: ${err.message}`);
 });
