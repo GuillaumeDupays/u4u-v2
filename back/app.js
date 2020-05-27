@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require ('express');
 const app = express();
-const api = require('./api/v1/index');
+const api = require('./api/v1');
 const auth = require('./auth/routes');
+
 const bodyParser = require('body-parser');
 const cors = require('cors');
 

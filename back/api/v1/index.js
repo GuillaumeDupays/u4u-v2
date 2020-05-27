@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
+
 const Contact = require('../models/contact');
 const Etat = require('../models/etat');
-const post = require("mongoose");
+const mongoose = require('mongoose');
 
 router.get('/ping', (req, res) => {
    res.status(200).json({ msg: 'pong', date: new Date()});
