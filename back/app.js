@@ -8,7 +8,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const connection = mongoose.connection;
 
-app.set('port', (process.env.port || 3000));
+app.set('port', (process.env.port || 2270));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
