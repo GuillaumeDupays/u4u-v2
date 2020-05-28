@@ -9,7 +9,7 @@ router.get('/ping', (req, res) => {
    res.status(200).json({ msg: 'pong', date: new Date()});
 });
 
-router.get('/contacts', (req, res) => {
+router.get('/#nous-rejoindre', (req, res) => {
         Contact.find()
             .sort({ 'createdOn': -1 })
             .exec()
@@ -31,7 +31,7 @@ router.get('/contacts', (req, res) => {
         }));
 });//http://localhost:3000/api/v1/etat*/
 
-router.post('/contacts', (req, res ) => {
+router.post('/#nous-rejoindre', (req, res ) => {
    console.log('req.body', req.body);
    const post = new Contact(req.body);
    post.save((err, post) => {

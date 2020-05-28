@@ -1,6 +1,6 @@
-const express = require ('express');
+const express = require('express');
 const app = express();
-const api = require('./api/v1');
+const api = require('./api/v1/index');
 const auth = require('./auth/routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
