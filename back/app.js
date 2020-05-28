@@ -8,11 +8,11 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const connection = mongoose.connection;
 
-app.set('port', (process.env.port || 2270));
+app.set('port', (process.env.port || 3000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({credentials: true, origin: 'http://usforyou.net/#nous-rejoindre'}));
+app.use(cors({credentials: true, origin: 'http://usforyou.net'}));
 // http://usforyou.net
 //passport
 const passport = require('passport');
@@ -67,7 +67,7 @@ app.use((req, res) => {
    res.json({ msg: '404 - Non trouvé', err: err});
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/#nous-rejoindre', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/contacts', { useNewUrlParser: true});
 connection.on('error', (err) => {
    console.error(`erreur de connexion vers MongoDb: ${err.message}`);
 });
