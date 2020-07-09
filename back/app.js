@@ -67,7 +67,7 @@ app.use((req, res) => {
    res.json({ msg: '404 - Non trouvé', err: err});
 });
 
-mongoose.connect('mongodb://localhost:27017/contact', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/contact-rh', { useNewUrlParser: true});
 connection.on('error', (err) => {
    console.error(`erreur de connexion vers MongoDb: ${err.message}`);
 });
