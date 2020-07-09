@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {Observable, Subject} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Contact} from "../models/contact";
+import {environment} from "../../environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  baseUrl ='http://usforyou.net:3000/api/v1/contacts';
+  baseUrl = `${environment.endpoint}`;
   // selectedContact: Contact;
 
 /*  'http://vps815314.ovh.net:3000/api/v1/contacts'

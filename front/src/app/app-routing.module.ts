@@ -15,14 +15,15 @@ import {FormComponent} from "./nous-rejoindre/form/form.component";
 import { HttpClientModule } from '@angular/common/http';
 
 import {AuthentificationComponent} from "./authentification/authentification.component";
+import {AdminComponent} from "./admin/admin.component";
 
 
 
 const routes: Routes = [
 
   { path: '', component: AccueilComponent },
-  { path: 'acces-collaborateur', component : AuthentificationComponent }
-
+  { path: 'acces-collaborateur', component : AuthentificationComponent },
+  // { path: 'admin', component : AdminComponent }
 /*
     { path: 'dirigeant', component: DirigeantComponent },
     { path: 'esprit', component: EtatEspritComponent },

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  endpoint: "http://usforyou.net:3000/api/v1/contacts"
 };
